@@ -1,0 +1,28 @@
+DUMP ON
+GOTO start<<1>>
+LIT 111 dummyFormal
+LABEL f<<2>>
+LOAD 0 i
+LOAD 1 j
+BOP -
+RETURN f<<2>>
+LABEL start<<1>>
+LIT 13 i
+LIT 27 j
+LIT 39 k
+LIT 0 m
+LIT 0 n
+LOAD 0 i
+LOAD 1 j
+BOP +
+LOAD 2 k
+BOP +
+STORE 3 m
+LOAD 2 k
+LOAD 3 m
+ARGS 2
+CALL f<<2>>
+STORE 4 n
+WRITE
+DUMP OFF
+HALT
